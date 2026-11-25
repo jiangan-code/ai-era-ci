@@ -65,22 +65,6 @@ git clone https://github.com/jiangan-code/ai-era-ci ~/.claude/skills/ai-era-ci
 - `git checkout ep1`：四个时候；
 - `git checkout ep2`：攒批。
 
-## 已验证 / 没验证
-
-**已验证：** skill 里的脚本和配置模板都在真实仓库里跑过。
-
-| 模板 | 实测内容 |
-|---|---|
-| 选相关测试的脚本 | 只改一个文件：挑出相关测试；改了公共文件：全跑；只改 README：跳过 |
-| 攒批脚本 | 格式不过的分支挡在批外；冲突的分支留给下一批；批次红了加一个修复分支变绿；上一批没合进去时，新批次被拦下 |
-| Vitest / Jest 的只跑相关测试 | 实测通过 |
-| 特性开关 | Python 和 TS 两版分桶结果一致 |
-| 所有 workflow | 都过了 actionlint |
-
-**没验证：**
-- 在真实 GitHub 仓库里用 gh 自动开批次 PR；
-- Go 的做法。
-
 ## License
 
 MIT
